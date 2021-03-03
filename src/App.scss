@@ -1,0 +1,14 @@
+// Imported global styling from EUI
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i");
+@import url("https://rsms.me/inter/inter-ui.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import "@elastic/eui/src/theme_light.scss";
+
+body {
+  @include euiHeaderAffordForFixed($euiHeaderHeightCompensation * 2);
+}
+
+.elastic-mark {
+  fill: $euiColorGhost;
+}

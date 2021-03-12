@@ -1,10 +1,7 @@
-import Dashboard from "./dashboard/dashboard";
-import DashboardIndex from "./dashboard/index";
-import Discover from "./discover/discover";
-import Home from "./home/home";
+import Maps from "./maps/maps";
 
 enum SOLUTIONS {
-  KIBANA = "kibana",
+  KIBANA = "Analytics",
   OBSERVABILITY = "observability",
 }
 
@@ -24,24 +21,9 @@ export const orderedCategories = [
 export const routes = [
   {
     category: SOLUTIONS.KIBANA,
-    label: "Discover",
-    path: "/discover",
-    component: Discover,
-  },
-  {
-    category: SOLUTIONS.KIBANA,
-    label: "Dashboard",
-    path: "/dashboard",
-    component: DashboardIndex,
-    routes: [
-      {
-        path: "/dashboard/:id",
-        component: Dashboard,
-      },
-    ],
-  },
-  {
+    label: "Maps",
     path: "/",
-    component: Home,
+    component: Maps,
   },
+  
 ];

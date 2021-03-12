@@ -1,0 +1,33 @@
+.kbnMapsTimeslider {
+  position: fixed;
+  left: 50%;
+  bottom: $euiSize;
+  transform: translateX(-50%);
+  min-width: 500px;
+  height: $euiSizeXXL * 2;
+  z-index: 99999;
+}
+
+.kbnMapsTimeslider__row {
+  display: flex;
+}
+
+.kbnMapsTimeslider__close {
+  position: absolute;
+  top: $euiSizeXS;
+  right: $euiSizeXS;
+}
+
+.kbnMapsTimeslider__timeWindow {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: $euiSizeXS;
+  margin-right: $euiSizeS;
+  background: $euiColorLightestShade;
+  border-radius: $euiBorderRadiusSmall;
+}
+
+.kbnMapsTimeslider__controls {
+  display: inline-flex;
+}

@@ -52,9 +52,9 @@ export const EuiRangeThumb: FunctionComponent<EuiRangeThumbProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    "euiRangeThumb",
+    "euiDateRangeThumb",
     {
-      "euiRangeThumb--hasTicks": showTicks,
+      "euiDateRangeThumb--hasTicks": showTicks,
     },
     className
   );

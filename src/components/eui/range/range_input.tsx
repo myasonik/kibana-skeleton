@@ -56,7 +56,7 @@ export const EuiRangeInput: FunctionComponent<EuiRangeInputProps> = ({
   return (
     <EuiFieldNumber
       name={name}
-      className={`euiRangeInput euiRangeInput--${side}`}
+      className={`euiDateRangeInput euiDateRangeInput--${side}`}
       min={Number(min)}
       max={Number(max)}
       step={step}

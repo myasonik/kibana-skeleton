@@ -1,0 +1,51 @@
+// Prefixes are unique in this file
+// sass-lint:disable no-vendor-prefixes
+
+@mixin euiDateRangeTrackSize {
+  height: $euiDateRangeTrackHeight;
+  transition: all $euiAnimSpeedNormal ease-in;
+  width: $euiDateRangeTrackWidth;
+}
+
+@mixin euiDateRangeTrackPerBrowser {
+  &::-webkit-slider-runnable-track {
+    @content;
+  }
+  &::-moz-range-track {
+    @content;
+  }
+  &::-ms-fill-lower {
+    @content;
+  }
+  &::-ms-fill-upper {
+    @content;
+  }
+}
+
+@mixin euiDateRangeThumbStyle {
+  @include euiBottomShadowLarge;
+  border: 2px solid $euiFormCustomControlBorderColor;
+  background: $euiColorPrimary no-repeat center;
+  border-radius: 50%;
+  cursor: pointer;
+  border-color: $euiDateRangeThumbBorderColor;
+  padding: 0;
+  height: $euiDateRangeThumbHeight;
+  width: $euiDateRangeThumbWidth;
+
+  // sass-lint:disable-block indentation
+  transition: background-color $euiAnimSpeedFast ease-in,
+    border-color $euiAnimSpeedFast ease-in;
+}
+
+@mixin euiDateRangeThumbPerBrowser {
+  &::-webkit-slider-thumb {
+    @content;
+  }
+  &::-moz-range-thumb {
+    @content;
+  }
+  &::-ms-thumb {
+    @content;
+  }
+}

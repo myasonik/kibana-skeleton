@@ -14,6 +14,7 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "classnames": "^2.2.6",
+    "eslint-webpack-plugin": "^2.5.2",
     "leaflet": "^1.7.1",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
@@ -62,5 +63,8 @@
     "@types/classnames": "^2.2.11",
     "@types/leaflet": "^1.5.23",
     "@types/react-router-dom": "^5.1.7"
+  },
+  "resolutions": {
+    "react-scripts/eslint-webpack-plugin": "2.3.0"
   }
 }

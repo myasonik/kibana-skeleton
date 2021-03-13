@@ -1,8 +1,8 @@
-.euiRangeInput {
+.euiDateRangeInput {
   width: auto;
   min-width: $euiSize * 4;
 
-  .euiRange__popover & {
+  .euiDateRange__popover & {
     // sass-lint:disable no-important
     margin: 0 !important;
     width: 100%;

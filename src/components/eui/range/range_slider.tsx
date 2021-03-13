@@ -65,12 +65,12 @@ export const EuiRangeSlider = forwardRef<HTMLInputElement, EuiRangeSliderProps>(
     ref
   ) => {
     const classes = classNames(
-      "euiRangeSlider",
+      "euiDateRangeSlider",
       {
-        "euiRangeSlider--hasTicks": showTicks,
-        "euiRangeSlider--hasFocus": hasFocus,
-        "euiRangeSlider--hasRange": showRange,
-        "euiRangeSlider--compressed": compressed,
+        "euiDateRangeSlider--hasTicks": showTicks,
+        "euiDateRangeSlider--hasFocus": hasFocus,
+        "euiDateRangeSlider--hasRange": showRange,
+        "euiDateRangeSlider--compressed": compressed,
       },
       className
     );

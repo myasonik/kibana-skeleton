@@ -1,4 +1,4 @@
-.euiRangeLevels {
+.euiDateRangeLevels {
   display: flex;
   justify-content: stretch;
   position: absolute;
@@ -13,13 +13,13 @@
   &--compressed {
     top: ($euiFormControlCompressedHeight / 2) + 2px;
 
-    &.euiRangeLevels--hasTicks {
+    &.euiDateRangeLevels--hasTicks {
       top: ($euiFormControlCompressedHeight / 4) + 2px;
     }
   }
 }
 
-.euiRangeLevel {
+.euiDateRangeLevel {
   display: block;
   height: 6px;
   border-radius: 6px;
@@ -27,7 +27,7 @@
 }
 
 // Modifier naming and colors.
-$euiRangeLevelColors: (
+$euiDateRangeLevelColors: (
   primary: $euiColorPrimary,
   success: $euiColorSuccess,
   warning: $euiColorWarning,
@@ -35,8 +35,8 @@ $euiRangeLevelColors: (
 );
 
 // Create level modifiers based upon the map.
-@each $name, $color in $euiRangeLevelColors {
-  .euiRangeLevel--#{$name} {
-    background-color: transparentize($color, .7);
+@each $name, $color in $euiDateRangeLevelColors {
+  .euiDateRangeLevel--#{$name} {
+    background-color: transparentize($color, 0.7);
   }
 }

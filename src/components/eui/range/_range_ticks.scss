@@ -1,24 +1,25 @@
-.euiRangeTicks {
+.euiDateRangeTicks {
   position: absolute;
-  left: ($euiRangeThumbWidth / 2);
-  right: ($euiRangeThumbWidth / 2);
+  left: ($euiDateRangeThumbWidth / 2);
+  right: ($euiDateRangeThumbWidth / 2);
   top: $euiSizeS;
   display: flex;
 }
 
-.euiRangeTick {
+.euiDateRangeTick {
   overflow-x: hidden;
   text-overflow: ellipsis;
   font-size: $euiFontSizeXS;
   position: relative;
   padding-top: $euiSize;
+  color: $euiColorDarkShade;
 
   &::before {
     @include size($euiSizeXS);
-
-    content: '';
-    background-color: $euiColorDarkShade;
-    border-radius: 100%;
+    width: $euiSizeXS;
+    height: $euiSizeM;
+    content: "";
+    background-color: $euiColorLightShade;
     position: absolute;
     top: 0;
     left: calc(50% - #{($euiSizeXS/2)});
@@ -44,10 +45,10 @@
   }
 }
 
-.euiRangeTicks--compressed {
+.euiDateRangeTicks--compressed {
   top: $euiSizeS - 2px;
 
-  .euiRangeTick {
+  .euiDateRangeTick {
     padding-top: $euiSize - 2px;
   }
 }

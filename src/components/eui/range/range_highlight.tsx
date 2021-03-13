@@ -17,8 +17,8 @@
  * under the License.
  */
 
-import React, { FunctionComponent } from 'react';
-import classNames from 'classnames';
+import React, { FunctionComponent } from "react";
+import classNames from "classnames";
 
 export interface EuiRangeHighlightProps {
   className?: string;
@@ -56,16 +56,16 @@ export const EuiRangeHighlight: FunctionComponent<EuiRangeHighlightProps> = ({
   };
 
   const classes = classNames(
-    'euiRangeHighlight',
+    "euiDateRangeHighlight",
     {
-      'euiRangeHighlight--hasTicks': showTicks,
-      'euiRangeHighlight--compressed': compressed,
+      "euiDateRangeHighlight--hasTicks": showTicks,
+      "euiDateRangeHighlight--compressed": compressed,
     },
     className
   );
 
-  const progressClasses = classNames('euiRangeHighlight__progress', {
-    'euiRangeHighlight__progress--hasFocus': hasFocus,
+  const progressClasses = classNames("euiDateRangeHighlight__progress", {
+    "euiDateRangeHighlight__progress--hasFocus": hasFocus,
   });
 
   return (

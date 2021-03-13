@@ -1,16 +1,16 @@
-.euiRangeTooltip {
+.euiDateRangeTooltip {
   // Keeps tooltip (value) aligned to percentage of actual slider
   display: block;
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: calc(100% - #{$euiRangeThumbWidth});
-  margin-left: $euiRangeThumbWidth / 2;
+  width: calc(100% - #{$euiDateRangeThumbWidth});
+  margin-left: $euiDateRangeThumbWidth / 2;
   pointer-events: none;
 }
 
-.euiRangeTooltip__value {
+.euiDateRangeTooltip__value {
   // Indentation for legibility in transition
   // sass-lint:disable-block indentation
   @include euiFontSizeS;
@@ -22,8 +22,7 @@
   color: $euiColorGhost;
   max-width: 256px;
   top: 50%;
-  transition:
-    box-shadow $euiAnimSpeedNormal $euiAnimSlightResistance,
+  transition: box-shadow $euiAnimSpeedNormal $euiAnimSlightResistance,
     transform $euiAnimSpeedNormal $euiAnimSlightResistance;
 
   // Custom sizing
@@ -32,7 +31,7 @@
 
   &::after,
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -$arrowSize / 2;
     left: 50%;
@@ -48,7 +47,7 @@
   }
 
   // Positions the arrow
-  &.euiRangeTooltip__value--right {
+  &.euiDateRangeTooltip__value--right {
     margin-left: $euiSizeL;
 
     &:before,
@@ -61,7 +60,7 @@
     }
   }
 
-  &.euiRangeTooltip__value--left {
+  &.euiDateRangeTooltip__value--left {
     margin-right: $euiSizeL;
 
     &:before,
@@ -75,8 +74,8 @@
     }
   }
 
-  &.euiRangeTooltip__value--right,
-  &.euiRangeTooltip__value--left {
+  &.euiDateRangeTooltip__value--right,
+  &.euiDateRangeTooltip__value--left {
     transform: translateX(0) translateY(-50%);
 
     &:before,
@@ -89,7 +88,7 @@
   &--hasTicks {
     top: ($euiFormControlHeight / 4);
 
-    .euiRangeTooltip--compressed & {
+    .euiDateRangeTooltip--compressed & {
       top: ($euiFormControlCompressedHeight / 4);
     }
   }

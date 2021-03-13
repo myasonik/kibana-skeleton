@@ -552,7 +552,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
         {showInput && !showInputOnly && (
           <>
             {minInput}
-            <div className="euiRange__horizontalSpacer" />
+            <div className="euiDateRange__horizontalSpacer" />
           </>
         )}
         {showLabels && (
@@ -650,7 +650,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
         {showLabels && <EuiRangeLabel disabled={disabled}>{max}</EuiRangeLabel>}
         {showInput && !showInputOnly && (
           <>
-            <div className="euiRange__horizontalSpacer" />
+            <div className="euiDateRange__horizontalSpacer" />
             {maxInput}
           </>
         )}
@@ -659,7 +659,7 @@ export class EuiDualRange extends Component<EuiDualRangeProps> {
 
     const thePopover = showInputOnly ? (
       <EuiInputPopover
-        className="euiRange__popover"
+        className="euiDateRange__popover"
         input={
           <EuiFormControlLayoutDelimited
             startControl={minInput!}

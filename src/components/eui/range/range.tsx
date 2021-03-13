@@ -232,7 +232,7 @@ export class EuiRange extends Component<EuiRangeProps> {
       />
     ) : null;
 
-    const classes = classNames("euiRange", className);
+    const classes = classNames("euiDateRange", className);
 
     const theRange = (
       <EuiRangeWrapper
@@ -315,7 +315,7 @@ export class EuiRange extends Component<EuiRangeProps> {
         )}
         {showInput && !showInputOnly && (
           <>
-            <div className="euiRange__horizontalSpacer" />
+            <div className="euiDateRange__horizontalSpacer" />
             {theInput}
           </>
         )}
@@ -324,7 +324,7 @@ export class EuiRange extends Component<EuiRangeProps> {
 
     const thePopover = showInputOnly ? (
       <EuiInputPopover
-        className="euiRange__popover"
+        className="euiDateRange__popover"
         input={theInput!} // `showInputOnly` confirms existence
         fullWidth={fullWidth}
         isOpen={this.state.isPopoverOpen}

@@ -12,7 +12,7 @@
 // It has been modified to fit the styling patterns of Kibana and
 // to be more easily maintained / themeable going forward.
 
-.euiRangeSlider {
+.euiDateRangeSlider {
   height: $euiFormControlHeight;
   appearance: none;
   background: transparent; // Otherwise white in Chrome
@@ -24,31 +24,31 @@
     cursor: not-allowed;
 
     // sass-lint:disable-block mixins-before-declarations
-    @include euiRangeThumbPerBrowser {
+    @include euiDateRangeThumbPerBrowser {
       cursor: not-allowed;
-      border-color: $euiRangeThumbBorderColor;
-      background-color: $euiRangeThumbBorderColor;
+      border-color: $euiDateRangeThumbBorderColor;
+      background-color: $euiDateRangeThumbBorderColor;
       box-shadow: none;
     }
 
-    ~ .euiRangeThumb {
+    ~ .euiDateRangeThumb {
       cursor: not-allowed;
-      border-color: $euiRangeThumbBorderColor;
-      background-color: $euiRangeThumbBorderColor;
+      border-color: $euiDateRangeThumbBorderColor;
+      background-color: $euiDateRangeThumbBorderColor;
       box-shadow: none;
     }
   }
 
-  @include euiRangeThumbPerBrowser {
-    @include euiCustomControl($type: 'round');
-    @include euiRangeThumbStyle;
+  @include euiDateRangeThumbPerBrowser {
+    @include euiCustomControl($type: "round");
+    @include euiDateRangeThumbStyle;
   }
 
-  @include euiRangeTrackPerBrowser {
-    @include euiRangeTrackSize;
-    background: $euiRangeTrackColor;
-    border: $euiRangeTrackBorderWidth solid $euiRangeTrackBorderColor;
-    border-radius: $euiRangeTrackRadius;
+  @include euiDateRangeTrackPerBrowser {
+    @include euiDateRangeTrackSize;
+    background: $euiDateRangeTrackColor;
+    border: $euiDateRangeTrackBorderWidth solid $euiDateRangeTrackBorderColor;
+    border-radius: $euiDateRangeTrackRadius;
   }
 
   &:focus {
@@ -57,28 +57,28 @@
 
   &:focus-visible,
   &--hasFocus {
-    @include euiRangeThumbPerBrowser {
+    @include euiDateRangeThumbPerBrowser {
       box-shadow: 0 0 0 $euiFocusRingSize $euiFocusRingColor;
     }
 
-    ~ .euiRangeThumb {
+    ~ .euiDateRangeThumb {
       border-color: $euiColorPrimary;
     }
 
-    @include euiRangeTrackPerBrowser {
+    @include euiDateRangeTrackPerBrowser {
       background-color: $euiColorPrimary;
       border-color: $euiColorPrimary;
     }
 
-    ~ .euiRangeHighlight .euiRangeHighlight__progress {
+    ~ .euiDateRangeHighlight .euiDateRangeHighlight__progress {
       background-color: $euiColorPrimary;
     }
 
-    ~ .euiRangeTooltip .euiRangeTooltip__value {
+    ~ .euiDateRangeTooltip .euiDateRangeTooltip__value {
       @include euiBottomShadowMedium;
 
-      &.euiRangeTooltip__value--right,
-      &.euiRangeTooltip__value--left {
+      &.euiDateRangeTooltip__value--right,
+      &.euiDateRangeTooltip__value--left {
         transform: translateX(0) translateY(-50%) scale(1.1);
       }
     }
@@ -90,7 +90,9 @@
   // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin-top: ((-$euiRangeTrackBorderWidth * 2 + $euiRangeTrackHeight) / 2) - ($euiRangeThumbHeight / 2);
+    margin-top: (
+        (-$euiDateRangeTrackBorderWidth * 2 + $euiDateRangeTrackHeight) / 2
+      ) - ($euiDateRangeThumbHeight / 2);
   }
 
   &::-ms-thumb {
@@ -102,10 +104,10 @@
   }
 
   &::-ms-track {
-    @include euiRangeTrackSize;
+    @include euiDateRangeTrackSize;
     background: transparent;
     border-color: transparent;
-    border-width: ($euiRangeThumbHeight / 2) 0;
+    border-width: ($euiDateRangeThumbHeight / 2) 0;
     color: transparent;
   }
 
@@ -117,16 +119,16 @@
   &--compressed {
     height: $euiFormControlCompressedHeight;
 
-    &.euiRangeSlider--hasTicks {
+    &.euiDateRangeSlider--hasTicks {
       height: $euiFormControlCompressedHeight / 2;
     }
   }
 }
 
 // Lighten the track when showing the range
-.euiRangeSlider--hasRange {
-  @include euiRangeTrackPerBrowser {
-    background-color: transparentize($euiRangeTrackColor, .6);
-    border-color: transparentize($euiRangeTrackBorderColor, .6);
+.euiDateRangeSlider--hasRange {
+  @include euiDateRangeTrackPerBrowser {
+    background-color: transparentize($euiDateRangeTrackColor, 0.6);
+    border-color: transparentize($euiDateRangeTrackBorderColor, 0.6);
   }
 }

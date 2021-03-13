@@ -1,10 +1,10 @@
-.euiRangeTrack {
-  height: 100%; // Don't overflow `euiRangeWrapper`
+.euiDateRangeTrack {
+  height: 100%; // Don't overflow `euiDateRangeWrapper`
   flex-grow: 1;
   position: relative; // for positioning ticks/levels
   align-self: flex-start; // Adjust vertical alignment of input based on extras
 
   &--disabled {
-    opacity: $euiRangeDisabledOpacity;
+    opacity: $euiDateRangeDisabledOpacity;
   }
 }

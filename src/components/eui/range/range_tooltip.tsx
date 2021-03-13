@@ -17,8 +17,8 @@
  * under the License.
  */
 
-import React, { FunctionComponent, ReactNode } from 'react';
-import classNames from 'classnames';
+import React, { FunctionComponent, ReactNode } from "react";
+import classNames from "classnames";
 
 export interface EuiRangeTooltipProps {
   value?: number | string;
@@ -41,15 +41,15 @@ export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
   showTicks,
   compressed,
 }) => {
-  const classes = classNames('euiRangeTooltip', {
-    'euiRangeTooltip--compressed': compressed,
+  const classes = classNames("euiDateRangeTooltip", {
+    "euiDateRangeTooltip--compressed": compressed,
   });
 
   // Calculate the left position based on value
   let val = 0;
-  if (typeof value === 'number') {
+  if (typeof value === "number") {
     val = value;
-  } else if (typeof value === 'string') {
+  } else if (typeof value === "string") {
     val = parseFloat(value);
   }
   const decimal = (val - min) / (max - min);
@@ -60,19 +60,19 @@ export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
   let valuePositionSide;
   let valuePositionStyle;
   if (valuePosition > 0.5) {
-    valuePositionSide = 'left';
+    valuePositionSide = "left";
     valuePositionStyle = { right: `${(1 - valuePosition) * 100}%` };
   } else {
-    valuePositionSide = 'right';
+    valuePositionSide = "right";
     valuePositionStyle = { left: `${valuePosition * 100}%` };
   }
 
   // Change left/right position based on value (half way point)
   const valueClasses = classNames(
-    'euiRangeTooltip__value',
-    `euiRangeTooltip__value--${valuePositionSide}`,
+    "euiDateRangeTooltip__value",
+    `euiDateRangeTooltip__value--${valuePositionSide}`,
     {
-      'euiRangeTooltip__value--hasTicks': showTicks,
+      "euiDateRangeTooltip__value--hasTicks": showTicks,
     }
   );
 
@@ -81,7 +81,8 @@ export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
       <output
         className={valueClasses}
         htmlFor={name}
-        style={valuePositionStyle}>
+        style={valuePositionStyle}
+      >
         {valuePrepend}
         {value}
         {valueAppend}

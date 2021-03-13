@@ -74,9 +74,9 @@ const EuiTickValue: FunctionComponent<
     tickStyle.width = `${percentageWidth}%`;
   }
 
-  const tickClasses = classNames("euiRangeTick", {
-    "euiRangeTick--selected": value === tickValue,
-    "euiRangeTick--isCustom": customTick,
+  const tickClasses = classNames("euiDateRangeTick", {
+    "euiDateRangeTick--selected": value === tickValue,
+    "euiDateRangeTick--isCustom": customTick,
   });
 
   const label = customTick ? customTick.label : tickValue;
@@ -111,8 +111,8 @@ export const EuiRangeTicks: FunctionComponent<EuiRangeTicksProps> = (props) => {
     ? undefined
     : { margin: `0 ${percentageWidth / -2}%`, left: 0, right: 0 };
 
-  const classes = classNames("euiRangeTicks", {
-    "euiRangeTicks--compressed": compressed,
+  const classes = classNames("euiDateRangeTicks", {
+    "euiDateRangeTicks--compressed": compressed,
   });
 
   return (

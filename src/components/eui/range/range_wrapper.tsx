@@ -31,10 +31,10 @@ export interface EuiRangeWrapperProps
 export const EuiRangeWrapper = forwardRef<HTMLDivElement, EuiRangeWrapperProps>(
   ({ children, className, fullWidth, compressed, ...rest }, ref) => {
     const classes = classNames(
-      "euiRangeWrapper",
+      "euiDateRangeWrapper",
       {
-        "euiRangeWrapper--fullWidth": fullWidth,
-        "euiRangeWrapper--compressed": compressed,
+        "euiDateRangeWrapper--fullWidth": fullWidth,
+        "euiDateRangeWrapper--compressed": compressed,
       },
       className
     );

@@ -17,8 +17,8 @@
  * under the License.
  */
 
-import React, { FunctionComponent } from 'react';
-import classNames from 'classnames';
+import React, { FunctionComponent } from "react";
+import classNames from "classnames";
 
 export interface EuiRangeLabelProps {
   /**
@@ -26,16 +26,20 @@ export interface EuiRangeLabelProps {
    */
   children: string | number;
   disabled?: boolean;
-  side?: 'min' | 'max';
+  side?: "min" | "max";
 }
 
 export const EuiRangeLabel: FunctionComponent<EuiRangeLabelProps> = ({
   children,
   disabled,
-  side = 'max',
+  side = "max",
 }) => {
-  const classes = classNames('euiRangeLabel', `euiRangeLabel--${side}`, {
-    'euiRangeLabel--isDisabled': disabled,
-  });
+  const classes = classNames(
+    "euiDateRangeLabel",
+    `euiDateRangeLabel--${side}`,
+    {
+      "euiDateRangeLabel--isDisabled": disabled,
+    }
+  );
   return <label className={classes}>{children}</label>;
 };

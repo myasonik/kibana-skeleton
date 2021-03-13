@@ -17,16 +17,16 @@
  * under the License.
  */
 
-import React, { FunctionComponent } from 'react';
-import classNames from 'classnames';
+import React, { FunctionComponent } from "react";
+import classNames from "classnames";
 
-export type EuiRangeLevelColor = 'primary' | 'success' | 'warning' | 'danger';
+export type EuiRangeLevelColor = "primary" | "success" | "warning" | "danger";
 
 export const LEVEL_COLORS: EuiRangeLevelColor[] = [
-  'primary',
-  'success',
-  'warning',
-  'danger',
+  "primary",
+  "success",
+  "warning",
+  "danger",
 ];
 
 export interface EuiRangeLevel {
@@ -63,9 +63,9 @@ export const EuiRangeLevels: FunctionComponent<EuiRangeLevelsProps> = ({
     }
   };
 
-  const classes = classNames('euiRangeLevels', {
-    'euiRangeLevels--hasTicks': showTicks,
-    'euiRangeLevels--compressed': compressed,
+  const classes = classNames("euiDateRangeLevels", {
+    "euiDateRangeLevels--hasTicks": showTicks,
+    "euiDateRangeLevels--compressed": compressed,
   });
 
   return (
@@ -79,7 +79,7 @@ export const EuiRangeLevels: FunctionComponent<EuiRangeLevelsProps> = ({
           <span
             key={index}
             style={{ width: `${width}%` }}
-            className={`euiRangeLevel euiRangeLevel--${level.color}`}
+            className={`euiDateRangeLevel euiDateRangeLevel--${level.color}`}
           />
         );
       })}

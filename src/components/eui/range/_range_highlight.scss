@@ -1,14 +1,16 @@
-.euiRangeHighlight {
+.euiDateRangeHighlight {
   position: absolute;
   left: 0;
   width: 100%;
-  top: calc(50% - #{($euiRangeHighlightHeight / 2)});
+  top: calc(50% - #{($euiDateRangeHighlightHeight / 2)});
+  background: $euiColorLightShade !important;
   overflow: hidden;
+  z-index: 1;
 
   &__progress {
-    height: $euiRangeHighlightHeight;
-    border-radius: $euiRangeHighlightHeight;
-    background-color: $euiRangeTrackColor;
+    height: $euiDateRangeHighlightHeight;
+    border-radius: $euiDateRangeHighlightHeight;
+    background-color: $euiDateRangeTrackColor;
 
     &--hasFocus {
       background-color: $euiColorPrimary;
@@ -16,10 +18,11 @@
   }
 
   &--hasTicks {
-    top: ($euiFormControlHeight / 4) - ($euiRangeHighlightHeight / 2);
+    top: ($euiFormControlHeight / 4) - ($euiDateRangeHighlightHeight / 2);
   }
 
-  &--hasTicks.euiRangeHighlight--compressed {
-    top: ($euiFormControlCompressedHeight / 4) - ($euiRangeHighlightHeight / 2);
+  &--hasTicks.euiDateRangeHighlight--compressed {
+    top: ($euiFormControlCompressedHeight / 4) -
+      ($euiDateRangeHighlightHeight / 2);
   }
 }

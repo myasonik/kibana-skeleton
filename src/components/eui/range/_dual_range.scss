@@ -1,6 +1,6 @@
 .euiDualRange {
   &__slider {
-    @include euiRangeThumbPerBrowser {
+    @include euiDateRangeThumbPerBrowser {
       visibility: hidden;
     }
   }

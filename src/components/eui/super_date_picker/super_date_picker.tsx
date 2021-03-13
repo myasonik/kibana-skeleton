@@ -3,10 +3,10 @@ import {
   EuiButton,
   EuiButtonIcon,
   EuiFlexGroup,
-  EuiFlexItem
-} from '@elastic/eui';
-import classNames from 'classnames';
-import React, { HTMLAttributes, ReactElement } from 'react';
+  EuiFlexItem,
+} from "@elastic/eui";
+import classNames from "classnames";
+import React, { HTMLAttributes, ReactElement } from "react";
 
 type Props = CommonProps & HTMLAttributes<HTMLDivElement>;
 
@@ -14,17 +14,18 @@ export function EuiSuperDatePicker({
   className,
   ...rest
 }: Props): ReactElement {
-  const classes = classNames('euiSuperDatePicker_shim', className);
+  const classes = classNames("euiSuperDatePicker_shim", className);
 
   return (
     <EuiFlexGroup
       gutterSize="s"
       responsive={false}
       className={classes}
-      {...rest}>
+      {...rest}
+    >
       <EuiFlexItem grow={false}>
         <EuiButton size="s" iconType="calendar">
-          Last 15 min
+          Last 90 days
         </EuiButton>
       </EuiFlexItem>
       <EuiFlexItem grow={false}>

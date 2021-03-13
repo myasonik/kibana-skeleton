@@ -4,12 +4,15 @@
   bottom: $euiSize;
   transform: translateX(-50%);
   min-width: 500px;
-  height: $euiSizeXXL * 2;
   z-index: 99999;
 }
 
 .kbnMapsTimeslider__row {
   display: flex;
+
+  > * {
+    align-items: center;
+  }
 }
 
 .kbnMapsTimeslider__close {

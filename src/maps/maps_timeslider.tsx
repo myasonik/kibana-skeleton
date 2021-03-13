@@ -6,11 +6,13 @@ import {
   EuiBadge,
   EuiPanel,
   EuiButtonIcon,
-  EuiDualRange,
-  EuiDualRangeProps,
+  // EuiDualRange,
+  // EuiDualRangeProps,
 } from "@elastic/eui";
 import { MapsIconNext, MapsIconPrevious } from "./icons/";
 import { useState } from "react";
+import { EuiDualRange } from "../components/eui";
+import { EuiDualRangeProps } from "../components/eui/range/dual_range";
 
 type MapsTimesliderProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {

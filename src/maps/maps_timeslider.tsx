@@ -38,7 +38,7 @@ export function MapsTimeslider({
   const classes = classNames("kbnMapsTimeslider", className);
 
   return (
-    <EuiPanel paddingSize="l" className={classes}>
+    <div className={classes}>
       <div className="kbnMapsTimeslider__row">
         <EuiButtonIcon
           onClick={onClose}
@@ -88,6 +88,6 @@ export function MapsTimeslider({
           ticks={ticks}
         />
       </div>
-    </EuiPanel>
+    </div>
   );
 }

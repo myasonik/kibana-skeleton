@@ -5,6 +5,9 @@
   transform: translateX(-50%);
   min-width: 500px;
   z-index: 99999;
+  background: $euiColorEmptyShade;
+  padding: $euiSizeL $euiSizeXL;
+  border-radius: $euiSize;
 }
 
 .kbnMapsTimeslider__row {

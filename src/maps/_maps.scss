@@ -2,3 +2,9 @@
   width: 100vw;
   height: calc(100vh - 160px); // 160px is the height of all the top navs
 }
+
+.kbnMaps__circle {
+  stroke: $euiColorVis2;
+  fill: $euiColorVis2;
+  fill-opacity: 0.6;
+}

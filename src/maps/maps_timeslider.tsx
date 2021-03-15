@@ -17,60 +17,25 @@ import { EuiDualRangeProps } from "../components/eui/range/dual_range";
 type MapsTimesliderProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     onClose: () => void;
+    onChangeTimeWindow: EuiDualRangeProps["onChange"];
+    onClickPrevious: () => void;
+    onClickNext: () => void;
+    timeWindowText: String;
+    timeWindow: EuiDualRangeProps["value"];
+    ticks: EuiDualRangeProps["ticks"];
   };
 
 export function MapsTimeslider({
   className,
   onClose,
+  onChangeTimeWindow,
+  timeWindowText,
+  onClickPrevious,
+  onClickNext,
+  timeWindow,
+  ticks,
 }: MapsTimesliderProps): ReactElement {
   const classes = classNames("kbnMapsTimeslider", className);
-  const last90DaysText: String[] = [
-    "Feb 28 - Mar 7",
-    "Mar 7 - Mar 14",
-    "Mar 14 - Mar 21",
-    "Mar 21 - Mar 28",
-    "Mar 28 - April 4",
-    "April 4 - April 11",
-  ];
-  const last90Days: EuiDualRangeProps["value"][] = [
-    [0, 1],
-    [1, 2],
-    [2, 3],
-    [3, 4],
-    [4, 5],
-    [5, 6],
-  ];
-  const ticks = [
-    { label: "Feb 28", value: 0 },
-    { label: "Mar 7", value: 1 },
-    { label: "Mar 14", value: 2 },
-    { label: "Mar 21", value: 3 },
-    { label: "Mar 28", value: 4 },
-    { label: "April 4", value: 5 },
-    { label: "April 11", value: 6 },
-  ];
-  const [timeWindow, setTimeWindow] = useState(last90Days[0]);
-  const [timeWindowText, setTimeWindowText] = useState(last90DaysText[0]);
-
-  const onChangeTimeWindow: EuiDualRangeProps["onChange"] = (value) => {
-    setTimeWindow(value);
-  };
-
-  const onClickNext = () => {
-    const isElement = (element: EuiDualRangeProps["value"]) =>
-      element[0] === timeWindow[0];
-
-    const position = last90Days.findIndex(isElement);
-
-    if (position >= last90Days.length - 1) {
-      setTimeWindow(last90Days[0]);
-      setTimeWindowText(last90DaysText[0]);
-    } else {
-      setTimeWindow(last90Days[position + 1]);
-      setTimeWindowText(last90DaysText[position + 1]);
-    }
-  };
-  const onClickPrevious = () => {};
 
   return (
     <EuiPanel paddingSize="l" className={classes}>

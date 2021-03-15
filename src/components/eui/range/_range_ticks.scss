@@ -2,7 +2,7 @@
   position: absolute;
   left: ($euiDateRangeThumbWidth / 2);
   right: ($euiDateRangeThumbWidth / 2);
-  top: $euiSizeS;
+  top: $euiSizeM;
   display: flex;
 }
 
@@ -16,12 +16,12 @@
 
   &::before {
     @include size($euiSizeXS);
-    width: $euiSizeXS;
-    height: $euiSizeM;
+    width: 3px;
+    height: $euiSizeS;
     content: "";
     background-color: $euiColorLightShade;
     position: absolute;
-    top: 0;
+    top: $euiSizeXS;
     left: calc(50% - #{($euiSizeXS/2)});
   }
 
